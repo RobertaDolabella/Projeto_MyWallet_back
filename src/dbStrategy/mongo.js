@@ -3,10 +3,10 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const mongoClient = new MongoClient(process.env.MONGO_URI);
+const MongoClient = new MongoClient(process.env.MONGO_URI);
 let db;
 mongoClient.connect(() => {
-  db = mongoClient.db(process.env.MONGO_DATABASE);
+  db = MongoClient.db(process.env.MONGO_DATABASE);
 });
 
 export { db }
