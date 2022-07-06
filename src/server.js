@@ -6,9 +6,9 @@ import UserRouter from './Routes/UserRouter.js'
 import validateUser from "./middlewares.js"
 
 const server = express()
-
-server.use(express.json())
 server.use(cors())
+server.use(express.json())
+
 
 dotenv.config()
 
