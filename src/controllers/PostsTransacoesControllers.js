@@ -20,9 +20,11 @@ export async function getTransacoes(request, response) {
 }
 
 export async function deteteTransacoes(request, response){
-
-    const idparadeletar = request.params.idDeletar
+    const idparadeletar = response.locals.idparadeletar;
     const id = parseInt(idparadeletar)
+
+    console.log(id)
+
 
 
     try {
